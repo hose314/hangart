@@ -29,5 +29,6 @@ body {
 	@include adjust-font-size-to(30px);
 }
 rect {
+	opacity: 0;
 	@include transform-origin();
 }
