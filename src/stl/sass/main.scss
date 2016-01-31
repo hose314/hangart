@@ -2,19 +2,6 @@
 @import "compass/css3";
 @import "compass/typography/vertical_rhythm";
 
-
-@include font-face("Roboto", font-url('https://fonts.googleapis.com/css?family=Roboto:100'));
-
-.Back {
-	width: 100vw;
-	height: 100vh;
-	z-index: 1;
-}
-body {
-	font-family: "Roboto";
-	font-size: 14px;
-	-webkit-font-smoothing: antialiased;
-}
 .ContentBox {
 	position: absolute;
 	top: 0;
@@ -24,11 +11,76 @@ body {
 	z-index: 2;
 	@include box-shadow(inset 0 0 30px #F3F3F3);
 }
-.Message {
-	font-weight: 100;
-	@include adjust-font-size-to(30px);
+.logo {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	margin-top: 15%;
 }
-rect {
-	opacity: 0;
-	@include transform-origin();
+.quote {
+	position: relative;
+	text-align: center;
+	padding: 50px 40px;
+
+	&__text {
+		font-family: "Lato", sans-serif;
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 700;
+		color: rgba(74, 144, 226, 0.59);
+
+		background: rgba(74, 144, 226, 0.01);
+		border-left: 8px solid #4A90E2;
+		padding: 20px 30px;
+		quotes: "\201C""\201D""\2018""\2019";
+
+		> span {
+			margin-top: 10px;
+			display: inline-block;
+			width: 100%;
+			text-align: right;
+		}
+	}
+
+	&:before {
+		color: #4a90e2;
+		content: open-quote;
+		font-size: 4em;
+
+		line-height: 0.1em;
+		margin-right: -52px;
+		vertical-align: 10px;
+	}
+}
+.credits {
+    text-align: center;
+    padding: 0 20px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #CFD8DC;
+
+	&__link {
+		padding: 4px 4px;
+		font-family: "Roboto", sans-serif;
+		font-weight: 300;
+    	color: #CFD8DC;
+		text-decoration: none;
+		border-bottom: 4px solid #CFD8DC;
+		@include transition();
+
+		&:hover {
+			color: #607D8B;
+			border-bottom: 4px solid #607D8B;
+		}
+	}
+}
+.copy
+{
+	position: absolute;
+	padding: 20px;
+	bottom: 0;
+	font-family: "Roboto", sans-serif;
+	color: #C7C7C7;
+	font-size: 11px;
+	font-weight: 300;
 }

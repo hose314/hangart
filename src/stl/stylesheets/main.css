@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,22 +55,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url(https://fonts.googleapis.com/css?family=Roboto:100);
-}
-.Back {
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-}
-
-body {
-  font-family: "Roboto";
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-}
-
 .ContentBox {
   position: absolute;
   top: 0;
@@ -82,16 +67,74 @@ body {
   box-shadow: inset 0 0 30px #F3F3F3;
 }
 
-.Message {
-  font-weight: 100;
-  font-size: 1.875em;
-  line-height: 1.6em;
+.logo {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 15%;
 }
 
-rect {
-  opacity: 0;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+.quote {
+  position: relative;
+  text-align: center;
+  padding: 50px 40px;
+}
+.quote__text {
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(74, 144, 226, 0.59);
+  background: rgba(74, 144, 226, 0.01);
+  border-left: 8px solid #4A90E2;
+  padding: 20px 30px;
+  quotes: "“" "”" "‘" "’";
+}
+.quote__text > span {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+.quote:before {
+  color: #4a90e2;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: -52px;
+  vertical-align: 10px;
+}
+
+.credits {
+  text-align: center;
+  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #CFD8DC;
+}
+.credits__link {
+  padding: 4px 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #CFD8DC;
+  text-decoration: none;
+  border-bottom: 4px solid #CFD8DC;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.credits__link:hover {
+  color: #607D8B;
+  border-bottom: 4px solid #607D8B;
+}
+
+.copy {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
+  color: #C7C7C7;
+  font-size: 11px;
+  font-weight: 300;
 }
