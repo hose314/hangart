@@ -1,0 +1,8 @@
+Hangart is built by betlabs.ru team, who are absolutely passionate about every product that they're building.
+
+Stack of technologies were: Linux
+                            PostgreSQL
+                            Nginx, Celery, Gunicorn, Supervisor
+                            Django, lots of Python modules
+                            jQuery, pure JavaScript, CSS3, HTML5
+                            Google Analytics, Yandex Metrika
